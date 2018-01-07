@@ -1,0 +1,170 @@
+/*full page styles*/
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+}
+
+p,
+h4,
+li,
+figcaption{
+  padding: 10px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+figcaption{
+  text-align: center;
+  margin: -30px 0 0 0;
+}
+
+/* link styles */
+.title_link{
+  text-decoration: none;
+}
+.title_link a:hover{
+  color: Orchid;
+}
+
+.more_link{
+  text-decoration: none;
+  color: black;
+  background-color: Lavender;
+  padding: 0.25em;
+  border: solid Lavender 3px;
+  border-radius: 6px;
+}
+
+#art,
+#space_design,
+#lesson,
+#web{
+  margin: 100px 5%;
+  width: 90%;
+  text-align: center;
+  border: 1px solid Lavender;
+}
+
+
+figure{
+  display: inline-block;
+}
+
+/*header*/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: -20px;
+}
+header ul{
+  text-align: center;
+  background-color: white;
+}
+header li{
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 10px 20px;
+  background-color: Lavender;
+  border: 5px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+header li a{
+  text-decoration: none;
+  color: black;
+}
+
+.name{
+  background-color: transparent;
+}
+
+.maina{
+  background-color: transparent;
+  color: Orchid;
+}
+
+/* about me */
+#top{
+  position: relative;
+  top: 50px;
+} 
+#about{
+  position: relative;
+  top: 50px;
+  background-color: Lavender;
+  width: 90%;
+  margin: 0 5%;
+  display: grid;
+  grid-template: 100% / 50% 50%;
+}
+#about li{
+  list-style: square inside;
+}
+
+#about img{
+  height: 400px;
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: center;
+  align-self: center;
+  padding: 20px;
+}
+
+#about_text{
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 20px;
+}
+
+
+/*art */
+
+#art img{
+  margin: 20px;
+  width: 200px;
+}
+
+
+/*space design*/
+#space_design img{
+  margin: 20px;
+  width: 400px;
+}
+
+/*lesson plans*/
+#lesson figure{
+  display: inline-block;
+}
+#lesson img{
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+}
+#lesson figcaption{
+  text-align: center;
+  margin: -30px 0 0 0;
+}
+/* web design */
+#web{
+  text-align: center;
+  margin: 0 5%;
+  width: 90%;
+}
+
+/*contact*/
+#contact{
+  text-align: center;
+}
+.social_img {
+  width: 50px;
+  margin: 0 100px;
+}
+
+
+/*footer*/
+footer{
+  text-align: center;
+}
+
