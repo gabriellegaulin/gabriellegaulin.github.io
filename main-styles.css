@@ -1,4 +1,10 @@
 /*full page styles*/
+
+#top{
+  position: relative;
+  top: 100px;
+}
+
 h2{
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -171,12 +177,11 @@ footer{
 /*sub pages extra styles*/
 #sub_nav{
   background-color: grey;
-  position: relative;
-  top: 200px;
 } 
 
 .container{
   margin: 50px 0 0 0;
+  text-align: center;
 }
 
 
