@@ -175,7 +175,7 @@ footer{
 }
 
 /*sub pages extra styles*/
-#sub_nav{
+.sub_nav{
   background-color: grey;
 } 
 
