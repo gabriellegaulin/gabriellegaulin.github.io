@@ -219,6 +219,12 @@ footer{
   width: 40%;
   display: inline-block;
 }
+.frame figure:hover{
+  -ms-transform: scale(2, 2); /* IE 9 */
+    -webkit-transform: scale(2, 2); /* Safari */
+    transform: scale(2, 2);
+  /*from https://www.w3schools.com/css/css3_2dtransforms.asp */
+}
 
 .frame img{
   width: 100%;
