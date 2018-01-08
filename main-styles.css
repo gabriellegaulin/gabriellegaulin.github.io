@@ -77,11 +77,12 @@ figure{
   position: fixed;
   width: 100%;
   z-index: 1;
-  padding-top: 20px;
+  margin-top : -25px;
 }
 nav ul{
   text-align: center;
   background-color: white;
+  padding-top: 15px;
 }
 nav li{
   display: inline-block;
@@ -182,8 +183,8 @@ nav li a:hover{
   text-align: center;
 }
 .social_img {
-  width: 50px;
-  margin: 0 100px;
+  width: 4%;
+  margin: 0 10%;
 }
 
 
