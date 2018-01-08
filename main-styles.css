@@ -78,6 +78,7 @@ figure{
   width: 100%;
   z-index: 1;
   top: -20px;
+  padding-top: 20px;
 }
 nav ul{
   text-align: center;
