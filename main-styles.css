@@ -176,6 +176,8 @@ footer{
 
 /*sub pages extra styles*/
 .sub_nav{
+  postion: relative;
+  top: 100px;
   background-color: grey;
 } 
 
