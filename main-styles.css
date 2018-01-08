@@ -52,18 +52,18 @@ figure{
   display: inline-block;
 }
 
-/*header*/
-header{
+/*navs*/
+#main_nav {
   position: fixed;
   width: 100%;
   z-index: 1;
   top: -20px;
 }
-header ul{
+nav ul{
   text-align: center;
   background-color: white;
 }
-header li{
+nav li{
   display: inline-block;
   padding: 3px 10px;
   margin: 10px 20px;
@@ -73,7 +73,7 @@ header li{
   font-size: 18px;
 }
 
-header li a{
+nav li a{
   text-decoration: none;
   color: black;
 }
@@ -168,3 +168,59 @@ footer{
   text-align: center;
 }
 
+/*sub pages extra styles*/
+#sub_nav{
+  background-color: grey;
+  position: relative;
+  top: 200px;
+} 
+
+.container{
+  margin: 50px 0 0 0;
+}
+
+
+.big_img img{
+  width: 100%;
+}
+
+/*sub images*/
+.frame{
+  text-align: center;
+}
+
+.frame figure{
+  width: 40%;
+  display: inline-block;
+}
+
+.frame img{
+  width: 100%;
+}
+
+.frame figcaption{
+  visibility: hidden;
+}
+
+.frame figcaption:hover{
+  visibilty: visible;
+}
+
+/*text description*/
+.desc_txt{
+  
+}
+
+
+
+/*top button*/
+#top_button{
+  text-align: center;
+  width: 4em;
+  height: 2em;
+  border: solid Lavender 2px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+}
