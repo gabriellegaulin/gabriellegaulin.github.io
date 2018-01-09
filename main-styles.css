@@ -236,7 +236,7 @@ footer{
 
 /*text description*/
 .desc_txt{
-  text-align: left;
+  text-align: left !important;
   width: 100%;
 }
 
