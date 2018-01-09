@@ -197,14 +197,13 @@ footer{
 } 
 
 .container{
-  margin: 50px 0 0 0;
   text-align: center;
 }
 
 
 .big_img img{
   width: 100%;
-  text-align: right;
+  padding-left: 5%;
 }
 
 /*sub images*/
@@ -218,9 +217,9 @@ footer{
 }
 
 .frame figure:hover{
-  -ms-transform: scale(2, 2); /* IE 9 */
-    -webkit-transform: scale(2, 2); /* Safari */
-    transform: scale(2, 2);
+  -ms-transform: scale(3, 3); /* IE 9 */
+    -webkit-transform: scale(3, 3); /* Safari */
+    transform: scale(3, 3);
   /*from https://www.w3schools.com/css/css3_2dtransforms.asp */
 }
 
@@ -237,6 +236,7 @@ footer{
 /*text description*/
 .desc_txt{
   text-align: left;
+  width: 100%;
 }
 
 
