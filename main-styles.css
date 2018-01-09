@@ -35,10 +35,7 @@ figcaption{
 }
 
 
-#art,
-#space_design,
-#lesson,
-#web{
+.border{
   margin: 100px 5%;
   width: 90%;
   text-align: center;
@@ -116,16 +113,12 @@ nav li a:hover{
 }
 #about{
   position: relative;
+  text-align: left;
   top: 50px;
-  width: 90%;
-  margin: 0 5%;
   display: grid;
   grid-template: 100% / 50% 50%;
-  border: 2px solid #F0CD8D; // gold
 }
-#about h1{
-  text-align: left;
-}
+
 #about li{
   list-style: square inside;
 }
@@ -140,7 +133,7 @@ nav li a:hover{
 
 #about_text{
   grid-area: 1 / 1 / 2 / 2;
-  padding: 20px;
+  padding: 20px 20px 20px 10%;
 }
 
 
