@@ -198,12 +198,13 @@ footer{
 
 .container{
   text-align: center;
+  margin-top: 30px;
 }
 
 
 .big_img img{
   width: 100%;
-
+  margin-right: 2%;
 }
 
 /*sub images*/
