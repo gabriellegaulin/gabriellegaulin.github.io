@@ -2,6 +2,10 @@
 
 /*full page styles*/
 
+.hide{
+  visibility: hidden;
+}
+
 #top{
   position: relative;
   top: 100px;
