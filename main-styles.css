@@ -278,9 +278,13 @@ footer{
 
 ///////////////////////////////////////////////////////////blow-up
 .blow-up{
-  visibility: hidden;
+  
 }
 
 .b-u-img{
   height: 750px;
+}
+
+.art-info {
+  padding: 3%;
 }
