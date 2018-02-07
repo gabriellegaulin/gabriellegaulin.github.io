@@ -286,5 +286,10 @@ footer{
 }
 
 .art-info {
-  padding: 3%;
+    padding: 3%;
+    height: 400px;
+}
+
+.art-info figcaption{
+    margin-bottom: 5$;
 }
