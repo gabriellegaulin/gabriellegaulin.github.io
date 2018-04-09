@@ -308,5 +308,50 @@ footer{
 }
 
 .art-info figcaption{
-    margin-bottom: 5$;
+    margin-bottom: 5%;
 }
+
+////////////////////////////////////////////currently////////////////////////////////////////////////////
+
+
+
+
+.about-me{
+    width: 90%;
+    margin: auto;
+    border: black 1px; 
+    display: inline-block;
+    background-color: aquamarine;
+}
+
+#reading{
+    width: 40%;
+    border: 2px black solid;
+    align-items: center;
+}
+
+.gr_grid_container {
+          /* customize grid container div here. eg: width: 500px; */
+            display: inline;
+}
+
+.gr_grid_book_container {
+          /* customize book cover container div here */
+          width: 98px;
+          height: 150px;
+          padding: 5px 5px;
+          overflow: hidden;
+            display: inline-block;
+}
+
+#listening{
+    width: 20%;
+    float: right;
+    background-color: grey;
+    
+}
+
+#suggestion{
+    background-color: aqua
+}
+
