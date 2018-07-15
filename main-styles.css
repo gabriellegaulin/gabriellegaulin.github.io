@@ -316,16 +316,39 @@ footer{
 
 
 
-.about-me{
+.about-grid{
+    position: relative;
+    top: 300px;
+    display: grid;
     width: 90%;
-    margin: auto;
-    border: black 1px; 
-    display: inline-block;
-    background-color: aquamarine;
+    grid-template: 50% 50% / 30% 70%;
+    grid-template-areas: "item1 item2"
+                        "item 3 reading";
+    background-color: aqua;
+    
 }
 
+#item1{
+    background-color: aqua;
+    grid-area: item1;
+    
+}
+
+#item2{
+    background-color: red;
+    grid-area: item2;
+}
+
+#item3{
+    background-color: aqua;
+}
+
+
+
+
+
+
 #reading{
-    width: 40%;
     border: 2px black solid;
     align-items: center;
 }
@@ -345,13 +368,16 @@ footer{
 }
 
 #listening{
-    width: 20%;
-    float: right;
-    background-color: grey;
+    grid-area: 1 / 2 / 2 / 3;
+    border: solild black 1px;
     
 }
 
+#working{
+    width: 70%;
+}
+
 #suggestion{
-    background-color: aqua
+    border: solid black 1px;
 }
 
