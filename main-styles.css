@@ -1,5 +1,32 @@
 <style>
 
+/* palette styles*/
+#palette{
+    /*display: inline-block;*/
+    align-content: center;
+}
+#jade{
+    background-color: #717448;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+#gold{
+    background-color: #F0CD8D;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+#brown{
+    background-color: #843929;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+
 /*full page styles*/
 
 .hide{
@@ -12,18 +39,22 @@
   top: 100px;
 padding-bottom: 5%;
 }
+.push_from_top{
+      position: relative;
+  top: 50px;
+}
 
 
 h1{
   font-family: 'Bellefair', serif;
   font-size: 3em;
-  color: #F0CD8D; //golden brown
+  color: #717448; //jade
 }
 
 h2{
   font-family: 'Bellefair', serif;
   font-size: 2em;
-  color: #F0CD8D; //golden brown
+  color: #717448; //jade
   padding: 100px 0;
   text-align: center;
 }
@@ -35,7 +66,11 @@ li,
 figcaption{
   padding: 10px;
   font-family: 'Dosis', sans-serif;
-  color: #54130D; //rich chestnut
+  color: #843929; //brown
+}
+
+em{
+   color: #717448; //jade 
 }
 
 figcaption{
@@ -43,18 +78,18 @@ figcaption{
   padding-top: 10px;
 }
 
-
 .border{
-  margin: 100px 5%;
   width: 90%;
-  text-align: center;
+    margin: auto;
   border: 2px solid #F0CD8D; // gold
 }
+
 
 
 figure{
   display: inline-block;
 }
+
 
 /* link styles */
 .title_link{
@@ -79,7 +114,6 @@ a:hover{
   background-color: #54130D; // rich chestnut
     color: white;
 }
-
 
 
 
@@ -120,19 +154,20 @@ nav li a:hover{
   color: #54130D;; //rich chestnut
 }
 
+///////////////////////////////////////////*page styles*/
+
+/*index*/
+
+
 /* about me */
 #top{
   position: relative;
   top: 50px;
 }
 #about{
-  position: relative;
-  text-align: left;
-  top: 50px;
   display: grid;
   grid-template: 100% / 50% 50%;
 }
-
 #about li{
   list-style: square inside;
 }
@@ -142,7 +177,6 @@ nav li a:hover{
   grid-area: 1 / 2 / 2 / 3;
   justify-self: right;
   align-self: end;
-/*border is off*/
 }
 
 #about_text{
@@ -151,7 +185,12 @@ nav li a:hover{
 }
 
 
+
+//*blocks for portfolio images*//
+
+
 /*art */
+
 
 #art figure{
     margin: 2%;
@@ -193,7 +232,12 @@ nav li a:hover{
   width: 90%;
 }
 
-/*contact*/
+
+
+
+
+
+/*footer*/
 #contact{
   text-align: center;
 }
@@ -202,11 +246,14 @@ nav li a:hover{
   margin: 0 10%;
 }
 
-
-/*footer*/
 footer{
   text-align: center;
 }
+
+
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////

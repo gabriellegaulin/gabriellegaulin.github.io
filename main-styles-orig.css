@@ -1,0 +1,448 @@
+<style>
+
+/* palette styles*/
+#palette{
+    /*display: inline-block;*/
+    align-content: center;
+}
+#jade{
+    background-color: #717448;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+#gold{
+    background-color: #F0CD8D;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+#brown{
+    background-color: #843929;
+    width:32%;
+    height: 100px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+/*full page styles*/
+
+.hide{
+  visibility: hidden;
+}
+
+#top, 
+.buffer{
+  position: relative;
+  top: 100px;
+padding-bottom: 5%;
+}
+
+
+h1{
+  font-family: 'Bellefair', serif;
+  font-size: 3em;
+  color: #717448; //jade
+}
+
+h2{
+  font-family: 'Bellefair', serif;
+  font-size: 2em;
+  color: #717448; //jade
+  padding: 100px 0;
+  text-align: center;
+}
+
+
+p,
+h4,
+li,
+figcaption{
+  padding: 10px;
+  font-family: 'Dosis', sans-serif;
+  color: #843929; //brown
+}
+
+em{
+   color: #717448; //jade 
+}
+
+figcaption{
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+.border{
+  margin: 100px 5%;
+  width: 90%;
+  text-align: center;
+  border: 2px solid #F0CD8D; // gold
+}
+
+
+figure{
+  display: inline-block;
+}
+
+/* link styles */
+.title_link{
+  text-decoration: none;
+  color: #54130D; // rich chestnut
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.more_link{
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+  background-color: #F0CD8D; // gold
+  border-radius: 6px;
+}
+
+.more_link:hover{
+  background-color: #54130D; // rich chestnut
+    color: white;
+}
+
+
+
+
+
+
+
+
+/*navs*/
+#main_nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin-top : -25px;
+}
+nav ul{
+  text-align: center;
+  background-color: white;
+  padding-top: 15px;
+}
+nav li{
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 10px 20px;
+  font-size: 18px;
+}
+
+nav li a{
+  text-decoration: none;
+  color: #54130D;; //rich chestnut
+}
+
+nav li a:hover{
+  text-decoration: none;
+  color: #F0CD8D; // gold
+}
+
+
+.maina{
+  padding: 0.3em;
+  border: solid 2px #F0CD8D; //gold
+  text-decoration: none;
+  color: #54130D;; //rich chestnut
+}
+
+
+
+
+
+
+
+
+
+/* about me */
+#top{
+  position: relative;
+  top: 50px;
+}
+#about{
+  position: relative;
+  text-align: left;
+  top: 50px;
+  display: grid;
+  grid-template: 100% / 50% 50%;
+}
+
+#about li{
+  list-style: square inside;
+}
+
+#about img{
+  width: 100%;
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: right;
+  align-self: end;
+/*border is off*/
+}
+
+#about_text{
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 20px 20px 20px 10%;
+}
+
+
+
+
+
+
+
+
+
+
+/*art */
+
+#art figure{
+    margin: 2%;
+    width: 20%; 
+    min-width: 200px;
+}
+
+#art img{
+  width: 90%;
+    margin: auto;
+}
+
+
+/*space design*/
+#space_design img{
+  margin: 20px;
+  width: 400px;
+}
+
+/*lesson plans*/
+#lesson figure{
+    width: 20%;
+    min-width: 200px;
+    margin: 0 3%;
+}
+
+#lesson img{
+  width: 100%;
+  border: solid 2px #F0CD8D; //gold
+}
+#lesson figcaption{
+  text-align: center;
+  margin: 0px 0 0 0;
+}
+/* web design */
+#web{
+  text-align: center;
+  margin: 0 5%;
+  width: 90%;
+}
+
+
+
+
+
+
+/*footer*/
+#contact{
+  text-align: center;
+}
+.social_img {
+  width: 4%;
+  margin: 0 10%;
+}
+
+footer{
+  text-align: center;
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+/*sub pages extra styles*/
+.sub_nav{
+  postion: relative;
+  top: 100px;
+} 
+
+.container{
+  text-align: center;
+  margin-top: 30px;
+}
+.st_margin{
+  margin: 10% 0 15% 0;
+}
+
+.big_img img{
+  width: 100%;
+  margin-right: 2%;
+}
+
+.big_img figure::hover{
+  -ms-transform: scale(2, 2); /* IE 9 */
+    -webkit-transform: scale(2, 2); /* Safari */
+    transform: scale(2, 2);
+  /*from https://www.w3schools.com/css/css3_2dtransforms.asp */
+}
+
+
+
+/*sub images*/
+.frame{
+  text-align: center;
+}
+
+.frame figure{
+  width: 40%;
+  display: inline-block;
+}
+
+.frame figure:hover{
+  -ms-transform: scale(2, 2); /* IE 9 */
+    -webkit-transform: scale(2, 2); /* Safari */
+    transform: scale(2, 2);
+  /*from https://www.w3schools.com/css/css3_2dtransforms.asp */
+}
+
+
+.frame img{
+  width: 100%;
+}
+
+.frame figcaption{
+  visibility: hidden;
+}
+
+
+/*text description*/
+.desc_txt{
+  width: 100%;
+  align-items: left;
+  
+}
+
+
+
+/*seek top button*/
+#top_button{
+  text-align: center;
+  width: 4em;
+  height: 2.5em;
+  border: solid 2px #F0CD8D; // gold;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+}
+#top_button p{
+  font-size: 1em;
+  text-decoration: none;
+  padding: 0.75em;
+}
+
+///////////////////////////////////////////////////////////blow-up
+.blow-up{
+  
+}
+
+.b-u-img{
+  height: 750px;
+}
+
+.art-info {
+    padding: 3%;
+    height: 400px;
+}
+
+.art-info figcaption{
+    margin-bottom: 5%;
+}
+
+////////////////////////////////////////////currently////////////////////////////////////////////////////
+
+
+
+
+.about-grid{
+    position: relative;
+    top: 300px;
+    display: grid;
+    width: 90%;
+    grid-template: 50% 50% / 30% 70%;
+    grid-template-areas: "item1 item2"
+                        "item 3 reading";
+    background-color: aqua;
+    
+}
+
+#item1{
+    background-color: aqua;
+    grid-area: item1;
+    
+}
+
+#item2{
+    background-color: red;
+    grid-area: item2;
+}
+
+#item3{
+    background-color: aqua;
+}
+
+
+
+
+
+
+#reading{
+    border: 2px black solid;
+    align-items: center;
+}
+
+.gr_grid_container {
+          /* customize grid container div here. eg: width: 500px; */
+            display: inline;
+}
+
+.gr_grid_book_container {
+          /* customize book cover container div here */
+          width: 98px;
+          height: 150px;
+          padding: 5px 5px;
+          overflow: hidden;
+            display: inline-block;
+}
+
+#listening{
+    grid-area: 1 / 2 / 2 / 3;
+    border: solild black 1px;
+    
+}
+
+#working{
+    width: 70%;
+}
+
+#suggestion{
+    border: solid black 1px;
+}
+

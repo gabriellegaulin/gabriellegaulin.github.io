@@ -2,6 +2,17 @@
 <html>
 
 <head>
+    
+    <!---- Currently variable definitions------>
+    <script>
+    var currently = {book: "Korea: Then & Now", listen: "", study: "Korean"}
+    
+//ids for access in html
+    document.getElementById("book").innerHTML = currently.book;
+    document.getElementById("listen").innerHTML = currently.listen;
+    document.getElementById("study").innerHTML = currently.study;
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122332124-1"></script>
 <script>
@@ -19,6 +30,7 @@
 	<link rel ="stylesheet" type = "text/css" href="main-styles.css">
 	<link rel="icon" type="image/gif" href="icon.gif" />
 	<title>Gabrielle Gaulin</title>
+    
 </head>
 
 <nav id = "main_nav">
@@ -36,8 +48,11 @@
 
 <body>
     <div>
-    
+        <br/>
+        <br/>
+        <p>Currently reading:</p> <p id="study"></p>
     </div>
+</body>
 
 
 
