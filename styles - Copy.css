@@ -22,14 +22,13 @@ html{
 }
 
 body{
-    background-image: url(/img/surface-design/norigae-checker-teal.PNG);
+    background-image: url(/img/surface-design/drifitng-leaves.png);
     background-size: 50%;
     background-repeat: repeat;
     background-color: var(--light-background);
     font-family: 'Ibarra Real Nova', serif;
     color: var(--light-main);
     font-size: 1.5em;
-    margin: 20px 0;
 }
 
 a{
@@ -69,7 +68,6 @@ i{
 nav{
     position: sticky;
     background-color: rgba(252, 252, 252, 0.703);
-    margin: 10px 0;
 }
 nav li{
     display: inline-block;
@@ -78,7 +76,6 @@ nav li{
 a:hover{
     color:var(--highlight);
 }
-
 
 /*index page styles*/
 
@@ -91,30 +88,59 @@ a:hover{
     padding: 2em 2em;
 }
 
-
-
 /*media query to break off of 50-50 for mobile*/
 
-@media (max-width: 800px) {
-    .main_box video {
+@media (max-width: 600px) {
+    .main_box{
+    display: block;
+    /*    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    'hanok'
+    'p'
+    ;)*/
+    }
+    #index_portfolio{
+        margin-top: 3em;
+    }
+
+    video {
         width: 95%;
-        height: auto;  
+        height: auto;
     }
     
   }
 
-  /*media query for full screen*/
+  @media (min-width: 601px) {
+.main_box{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 30% 80%;
+    grid-template-areas: 
+    'hanok p'
+    'hanok p'
+    ;
+}
 
-  @media (min-width: 801px) {
- 
-.main_box video {
-        width: 60% !important;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    #index_img{
+        grid-area: hanok;
     }
-  }
 
+    video {
+        width: 50% !important;
+        height: auto;
+        margin: auto;
+    }
+    
+    /*#index_logo{
+        grid-area: logo;
+    }*/
+    
+    #index_portfolio{
+        grid-area: p;
+    }
+}
   
 
 
@@ -153,8 +179,9 @@ a:hover{
 }
 
 
-
 /*art styles*/
+
+
 
 figcaption.hover{
     visibility: hidden;
