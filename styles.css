@@ -69,6 +69,10 @@ button{
     color: var(--highlight);
 }
 
+.complement{
+    color: var(--light-complement)
+}
+
 .center-text{
     text-align: center;
 }
@@ -78,9 +82,7 @@ h2{
     text-align: center;
 }
 
-i{
-    color: var(--light-contrast);
-}
+
 
 .blue-border{
     border: 2px  var(--light-complement);
@@ -98,24 +100,42 @@ i{
 
 nav{
     position: sticky;
-    background-color: rgba(252, 252, 252, 0.703);
+    background-color: var(--light-background);
+    border-radius: 8px;
     margin: 10px 0;
+    height: auto;
+    align-content: center;
 }
 nav li{
     display: inline-block;
-    padding: 2%;
+    padding: 0 10px;
+    font-size: 1.2em;
 }
 a:hover{
     color:var(--highlight);
 }
 
+#nav_logo{
+    width: 20px;
+    margin-bottom: -3px;
+}
+
+i{
+    color: var(--light-contrast);
+}
+
+
+
 /*footer*/
 .fade_box{
     color:#fff;
-    
     padding: 10px;
-    margin: 10px 0 0 0;
+    text-align: center;
 }
+
+
+
+
 
 /*index page styles*/
 
@@ -124,9 +144,12 @@ a:hover{
 }
 
 #index_img, .box {
-    background-color: #fff;
+    background-color: var(--light-background);
     padding: 2em 2em;
+    border-radius: 8px;
 }
+
+
 
 
 
