@@ -9,6 +9,7 @@
     --light-contrast: #9b1b30;
     --highlight: #f4d389;
     --gallery-background: #39444a ;
+    --art-card: url(./img/art/portrait_remy_colorful.png)
 }
 
 /*full document styles*/
@@ -38,28 +39,7 @@ a{
     color: var(--light-complement);
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
-
-fig > img:hover {
-    transform: scale(1.5);
-}
-
-
-ul{
-    list-style: none;
-}
-
-input,
-button{
-    font: inherit;
-    color: inherit;
-    border: none;
-    outline: none;
-    background-color: transparent;
-}
+/*full page class defs*/ 
 
 .contrast{
     color: var(--light-contrast);
@@ -83,19 +63,6 @@ h2{
 }
 
 
-
-.blue-border{
-    border: 2px  var(--light-complement);
-
-}
-
-.gallery-main{
-    background-color: var(--gallery-background);
-}
-
-
-
-
 /*nav styles*/
 
 nav{
@@ -106,6 +73,11 @@ nav{
     height: auto;
     align-content: center;
 }
+
+nav ul{
+    list-style: none;
+}
+
 nav li{
     display: inline-block;
     padding: 0 10px;
@@ -139,40 +111,81 @@ i{
 
 /*index page styles*/
 
-.main_box{
-    margin: 0 2%;
+
+
+#anim_box{
+    border-radius: 1.5em;
+    background-color: #fff;
+    padding: 20px;
+    height: auto;
 }
 
-#index_img, .box {
-    background-color: var(--light-background);
-    padding: 2em 2em;
-    border-radius: 8px;
+#anim_box video{
+    width: 95%;
 }
 
 
 
+#art, #design, #about, #language {
+    width: 46%;
+    background-color: #9b1b30;
+    border-radius: 1em;
+}
+
+#art{
+    background-image: var(--art-card);
+}
 
 
 /*media query to break off of 50-50 for mobile*/
 
 @media (max-width: 800px) {
-    .main_box video {
-        width: 95%;
-        height: auto;  
+    #index_box{
+        display: inline-block;
     }
+    
+    #anim_box {
+        width: 95%; /*orig setting 95%*/
+        height: auto;
+        margin: auto;  
+    }
+
+    .card-gallery{
+        width: 95%; /*orig setting 95%*/
+        height: auto;
+        margin: auto; 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 6px;
+    }
+    
+
+    
     
   }
 
   /*media query for full screen*/
 
   @media (min-width: 801px) {
- 
-.main_box video {
-        width: 60% !important;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    #index-box{
+        display: flex;
     }
+    
+    #anim_box{
+        width: 50%;
+    }
+    .card-gallery{
+        width: 50%;
+        margin-left: 6px;
+    }
+    .card-gallery{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 6px;
+    }
+
   }
 
   
