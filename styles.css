@@ -9,7 +9,7 @@
     --light-contrast: #9b1b30;
     --highlight: #f4d389;
     --gallery-background: #39444a ;
-    --art-card: url(./img/art/portrait_remy_colorful.png)
+    --art-card: url(./img/art/painting/seo-processing-s.png);
 }
 
 /*full document styles*/
@@ -32,6 +32,11 @@ body{
     color: var(--light-main);
     font-size: 1.5em;
     margin: 20px 0;
+}
+button{
+    font-family: 'Ibarra Real Nova', serif;
+    color: var(--light-main);
+    font-size: 1.5em;
 }
 
 a{
@@ -58,8 +63,7 @@ a{
 }
 
 h2{
-    background-color: rgba(252, 252, 252, 0.703);
-    text-align: center;
+    margin-top: 10px
 }
 
 
@@ -71,15 +75,16 @@ nav{
     border-radius: 8px;
     margin: 10px 0;
     height: auto;
-    align-content: center;
 }
 
 nav ul{
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav li{
-    display: inline-block;
     padding: 0 10px;
     font-size: 1.2em;
 }
@@ -92,8 +97,12 @@ a:hover{
     margin-bottom: -3px;
 }
 
+
 i{
     color: var(--light-contrast);
+}
+i:hover{
+    color:var(--highlight);
 }
 
 
@@ -111,9 +120,12 @@ i{
 
 /*index page styles*/
 
+#index_box{
+    margin: auto;
+    width: 9%;
+}
 
-
-#anim_box{
+#anim_box, .main_box{
     border-radius: 1.5em;
     background-color: #fff;
     padding: 20px;
@@ -125,16 +137,6 @@ i{
 }
 
 
-
-#art, #design, #about, #language {
-    width: 46%;
-    background-color: #9b1b30;
-    border-radius: 1em;
-}
-
-#art{
-    background-image: var(--art-card);
-}
 
 
 /*media query to break off of 50-50 for mobile*/
@@ -150,18 +152,10 @@ i{
         margin: auto;  
     }
 
-    .card-gallery{
-        width: 95%; /*orig setting 95%*/
-        height: auto;
-        margin: auto; 
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        gap: 6px;
+    #index_nav, #socials_nav {
+        width: 95%;
+        margin: 10px auto;
     }
-    
-
-    
     
   }
 
@@ -173,17 +167,13 @@ i{
     }
     
     #anim_box{
-        width: 50%;
+        width: 700px;
+        margin: auto;
     }
-    .card-gallery{
-        width: 50%;
-        margin-left: 6px;
-    }
-    .card-gallery{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        gap: 6px;
+    #index_nav, #socials_nav {
+        width: 700px;
+        margin: 10px auto;
+
     }
 
   }
@@ -198,50 +188,96 @@ i{
     display: block;
 }
 
-.index_portfolio_tile{
-    display: inline-block;
-    width: 47%;
-    min-width: 12em;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    margin: 0 .2em .2em 0;
+
+/*about page styles*/
+.box_2_3{
+    display: flex;
 }
-
-#index_art{
-    background-image: url(/img/art/painting/dtyis_portrait_pomegranate.png);
+#about_1{
+    width: 800px;
 }
-
-#index_design{
-    background-image: url(/img/surface-design/drifitng-leaves.png);
+#about_2{
+    width:fit-content;
+    margin: auto;
 }
+@media (max-width: 800px) {
+    .box_2_3{
+      flex-direction: column;
+    }
 
-#index_language{
-    background-image: url(/img/lessons/poem_chanhee.JPG);
-
-}
-
-#index_interiors{
-    background-image: url(/img/space/thesis/0court-sm.png);
-}
-
-
+    #about_1{
+        width: 90%;
+    }
+  }
 
 /*art styles*/
 
-figcaption.hover{
-    visibility: hidden;
+/*hover caption effect*/
+
+figcaption{
+    text-align: center;
+    position: relative; 
+    bottom: 40px; 
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.7); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: var(--light-contrast);
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  fig:hover figcaption {
+    opacity: 1;
+  }
+
+/*opening and closing tabs*/
+.collapsible {
+    height: 300px;
+    width: 85%;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    display: block;
+    margin: auto;
+}
+.upper {
+border-radius: 150px 150px 50px 50px;
+background-position: top;
+}
+
+.lower {
+border-radius: 50px 50px 150px 150px;
+background-position: center;
+}
+
+.collapsible h2{
+    background-color: rgba(255, 255, 255, 0.7); 
     text-align: center;
 }
-
-figcaption.hover:hover{
-    visibility: visible;
+.active, .collapsible:hover{
+background-image: none;
+background-color: blue;
 }
 
+.content {
+padding: 0 18px;
+display: none;
+overflow: hidden;
+}
 
 /*from w3 schools -- flexbox gallery*/
 
 /*flex box column*/
+.flexbox{
+    width: 90%;
+    margin: auto;
+    border-radius: 1.5em;
+    background-color: #fff;
+    padding: 20px;
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -249,10 +285,16 @@ figcaption.hover:hover{
   }
   
   /* Create four equal columns that sits next to each other */
-  .column {
+  .column4 {
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
+  }
+
+  .column4 img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
   }
   
   .column3 {
@@ -260,16 +302,16 @@ figcaption.hover:hover{
     max-width: 33%;
     padding: 0 4px;
   }
-
-  .column img {
+  .column3 img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
   }
   
+  
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
-    .column, .column3 {
+    .column4, .column3 {
       flex: 50%;
       max-width: 50%;
     }
@@ -277,7 +319,7 @@ figcaption.hover:hover{
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
-    .column, .column3 {
+    .column4, .column3 {
       flex: 100%;
       max-width: 100%;
     }
