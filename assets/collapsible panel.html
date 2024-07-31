@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+
+	<title>Semi Circle tabs</title>
+
+	<style>
+
+		/* Using the border-radius property 
+		to draw the semi-circle*/
+	
+		.collapsible {
+			height: 200px;
+			width: 400px;
+      cursor: pointer;
+      background-size: cover;
+      border: none;
+		}
+    .upper {
+      border-radius: 150px 150px 50px 50px;
+      background-position: top;
+    }
+
+    .lower {
+      border-radius: 50px 50px 150px 150px;
+      background-position: top;
+    }
+    .active, .collapsible:hover{
+      background-image: none;
+      background-color: blue;
+    
+    }
+
+    .content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+	</style>
+</head>
+
+
+
+<body>
+	
+
+<button class="collapsible upper" 
+  id="acrylic"
+  style="background-image: url(/img/art/painting/landscape_plant_lady.png);">
+  <h2 style="background-color: transparent; text-align: center;">acrylic</h2>
+</button>
+<div class="content">
+  <p>content</p>
+</div>
+
+<button class="collapsible lower" 
+  id="acrylic"
+  style="background-image: url(/img/art/painting/landscape_plant_lady.png);">
+  <h2 style="background-color: transparent; text-align: center;">acrylic</h2>
+</button>
+<div class="content">
+  <p>content</p>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+</body>
+
+</html>

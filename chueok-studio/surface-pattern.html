@@ -1,0 +1,327 @@
+<!DOCTYPE HTML> 
+<html lang="en-US"> 
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">   
+  <title>Chueok Studio - Surface Patterns</title>
+  <link href="/chueok-studio/styles.css" rel="stylesheet" />
+
+  <!-- source (edited): https://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
+    Our photos are 460 pixels square, which ensures that they are scaled 
+    down slightly except on the largest of screens. This way, the photos always will look crisp.-->
+  
+  <style type="text/css">
+    
+    .wrap {
+       overflow: hidden;
+       margin: -10px;
+
+    }
+    .box {
+       float: left;
+       position: relative;
+       width: 25%;
+       padding-bottom: 25%;
+    }
+    .boxInner {
+       position: absolute;
+       left: -10px;
+       right: -10px;
+       top: -10px;
+       bottom: -10px;
+       overflow: hidden;
+    }
+    .boxInner img {
+       width: 100%;
+       opacity: .85;
+    }
+    .boxInner .titleBox {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       margin-bottom: -200%;
+       background: #39444a;
+       background: rgba(57, 68, 74, .5);
+       color: #FFF;
+       padding: 50% 0;
+       text-align: center;
+       -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+       transition: all 0.3s ease-out;
+    }
+    body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+       margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px) {
+       /* Smartphone view: 1 tile */
+       .box {
+          width: 100%;
+          padding-bottom: 100%;
+       }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+       /* Tablet view: 2 tiles */
+       .box {
+          width: 50%;
+          padding-bottom: 50%;
+       }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+       /* Small desktop / ipad view: 3 tiles */
+       .box {
+          width: 33.3%;
+          padding-bottom: 33.3%;
+       }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+       /* Medium desktop: 4 tiles */
+       .box {
+          width: 25%;
+          padding-bottom: 25%;
+       }
+    }
+  </style> 
+  
+  <!-- Enable media queries for old IE -->
+  <!--[if lt IE 9]>
+     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+  
+</head> 
+<body class="no-touch"> 
+  <header>
+    <div id="long-logo"><a href="/chueok-studio/index.html"><img src="/chueok-studio/img/chueok-studio-long-logo.svg"></a></div>
+    <div id="stamp"><img src="/chueok-studio/img/ChueokStudioRed.svg"></div>
+    <div id="shop-nav">
+        <ul>
+            <li><a href="" target="_blank">etsy</a></li>
+            <li><a href="" target="_blank">ko-fi</a></li>
+            <li><a href="https://www.spoonflower.com/profiles/chueok_studio" target="_blank">spoonflower</a></li>
+        </ul>
+    </div>
+    <div id="socials">
+        <ul>
+        <li><a href="" target="_blank">insta</a></li>
+        <li><a href="" target="_blank">tiktok</a></li>
+        <li><a href="" target="_blank">youtube</a></li>
+        </ul>
+    </div>
+</header>
+
+<nav class="sub-nav">
+  <ul>
+    <li><a href="">jewelry</a></li>
+    <li><a href="">stationary</a></li>
+    <li><a href="">printables</a></li>
+    <li><a href="">surface pattern design</a></li>
+    <li><a href="">about</a></li>
+  </ul>
+</nav>
+
+  <div class="wrap">
+    
+    <!-- Define all of the tiles: img size should be 460px wide-->
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Suljari_jade_1.jpg" />
+        <div> <img src="/img/art/dwg/clos-de-luce.JPG"></div>
+        <div class="titleBox">
+          Suljari - <a href="/chueok-studio/surface-pattern/Midnight-Scholar/index.html">Midnight Scholar Collection</a> 
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Roof-Tiles-clean_gold_1.jpg" />
+        <div class="titleBox">Old Roof - Midnight Seonbi Collection <br />
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Bojagi_multi_1.jpg">
+        <div class="titleBox">
+          Bojagi - Midnight Seonbi Collection
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Norigae_rust_1.jpg" />
+        <div class="titleBox">
+          Norigae - Midnight Seonbi Collection
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Suljari_earth_1.jpg" />
+        <div class="titleBox">Suljari - Midnight Seonbi Collection
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Norigae-charms_navy_1.jpg" />
+        <div class="titleBox">Norigae Charms- Midnight Seonbi Collection <br/> 
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Roof-Tiles-weeds_classic_1.jpg" />
+        <div class="titleBox">
+          New Roof - Midnight Scholar Collection
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Seonbi/Bojagi_rust_1.jpg" />
+        <div class="titleBox">
+          Bojagi - Midnight Scholar Collection
+          <a href="https://www.behance.net/gallery/174017143/Midnight-Scholar-Pattern-Collection/modules/982517017" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Fruit-basket_raisin.jpg" />
+        <div class="titleBox">
+          Fruit Basket - Raisin <br/>
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Fu_Papercut_Pattern_GG.jpg" />
+        <div class="titleBox">
+          Fu Papercut - Bright <br/>
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Pattern _bunnies_orange.jpg" />
+        <div class="titleBox">
+          Papercut Bunnies - Tangerine on Raisin<br />
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="https://www.spoonflower.com/en/fabric/14208985-papercut-bunnies-tangerine-pear-on-raisin-by-chueok_studio" target="_blank">
+            purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Fruit-basket_lilac.jpg" />
+        <div class="titleBox">
+          Fruit Basket - Lilac <br/>
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Fu_Pattern_GG.jpg" />
+        <div class="titleBox">
+          Fu Lattice - Muted <br/>
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="" target="_blank">purchase on spoonflower</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="boxInner">
+        <img src="/chueok-studio/img/surface-pattern/Papercuts/Pattern _bunnies_aqua.jpg" />
+        <div class="titleBox">
+          Papercut Bunnies - Raisin on Pear <br />
+          <a href="https://www.behance.net/gallery/168500883/Papercut-Surface-Pattern-mini-Collection/modules/959424619" target="_blank"> 
+            collection story</a> <br/> 
+          <a href="https://www.spoonflower.com/en/fabric/14208980-papercut-bunnies-raisin-turquoise-on-pear-by-chueok_studio" target="_blank">
+            purchase on spoonflower</a>
+      </div>
+    </div>
+    
+  </div>
+  <!-- /#wrap -->
+
+  <!-- default box
+  <div class="box">
+      <div class="boxInner">
+        <img src="" />
+        <div class="titleBox">Winding garden path</div>
+        <a href="" target="_blank">collection story</a></div>
+        <a href="" target="_blank">purchase on spoonflower</a></div>
+      </div>
+    </div>
+  
+  -->
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     // See if this is a touch device
+     if ('ontouchstart' in window)
+     {
+        // Set the correct body class
+        $('body').removeClass('no-touch').addClass('touch');
+       
+        // Add the touch toggle to show text
+        $('div.boxInner img').click(function(){
+           $(this).closest('.boxInner').toggleClass('touchFocus');
+        });
+     }
+  });
+  </script>
+  
+</body> 
+</html>

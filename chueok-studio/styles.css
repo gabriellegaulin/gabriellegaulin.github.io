@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --light-white: #fef6c9;
+    --light-main: #f18f01 ;
+    --light-complement: #53b0ae;
+    --light-contrast: #9b1b30;
+    --highlight: #edafb8;
+    --gallery-background: #39444a ;
+    --art-card: url(./img/art/painting/seo-processing-s.png);
+
+    --block-1-img: url(/chueok-studio/img/jewelry/buddha_hands_color\ \(3\).jpg);
+    --block-2-img: url(/chueok-studio/img/stationary/Chaekgeori_disp.JPG);
+    --block-3-img: url();
+    --block-4-img: url(/chueok-studio/img/surface-pattern/Seonbi/Suljari_jade_1.jpg);
+    --block-5-img: url(/chueok-studio/img/fashion/hanbok-ribbon-tie-fs.jpg);
+
+}
+
+
+body{
+    padding: 1vw;
+    background: var(--light-white);
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+button{
+  font-family: 'Ibarra Real Nova', serif;
+  color: var(--light-main);
+  font-size: 1.5em;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light-contrast);
+}
+a:hover{
+  color:var(--light-complement);
+}
+
+
+
+
+
+header{
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-area: auto;
+    grid-template-areas:
+    "long-logo long-logo long-logo stamp shop-nav socials"
+}
+
+#long-logo{
+  grid-area: long-logo;
+  align-items: center;
+}
+
+#long-logo img{
+  width: 100%;
+  
+}
+
+#stamp{
+  grid-area: stamp;
+}
+
+#stamp img{
+  justify-self: center;
+  align-self: center;
+  height: 80px;
+  border-radius: 5px;
+}
+
+#shop-nav{
+  grid-area: shop-nav;
+}
+
+#socials{
+  grid-area: socials;
+}
+
+header ul{
+  list-style: none;
+  align-items: left;
+  justify-content: space-between;
+}
+
+header li{
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+
+/*sub nav for product*/
+.sub-nav{
+  /*border: 1px solid var(--light-complement);
+  border-radius: 20px;*/
+  margin-bottom: 20px;
+}
+.sub-nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-nav li{
+  padding: 0;
+
+}
+
+
+.bento_grid {
+   
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "block1 block2 block3"
+      "block1 block2 block3"
+      "block1 block2 block3"
+      "long1 long1 block4"
+      "block5 block5 block4"
+      "block5 block5 block4 "
+      "block5 block5 long2 ";
+  }
+
+  .item {
+    border: 0px solid #464545;
+    border-radius: 10px;
+    background-size: cover;
+    color: var(--light-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-content{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item-content a{
+    color: var(--light-white);
+  }
+  .item-content a:hover{
+    font-size: 1.5em;
+  }
+
+  .item:hover .item-content{
+    visibility: visible;
+    background-color: inherit;
+    width: inherit;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .bento_grid .item:nth-child(1) {
+    grid-area: block1;
+    background-image: var(--block-1-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+  .bento_grid  .item:nth-child(2) {
+    grid-area: block2;
+    background-image: var(--block-2-img);
+    background-position: center;
+    background-color: var(--light-main);
+  }
+  
+  .bento_grid  .item:nth-child(3) {
+    grid-area: block3;
+    background-image: var(--block-3-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+  .bento_grid  .item:nth-child(4) {
+    grid-area: long1;
+    background-color: var(--highlight);
+  }
+  
+  .bento_grid  .item:nth-child(5) {
+    grid-area: block4;
+    background-image: var(--block-4-img);
+    background-position: center;
+    background-color: var(--light-main);
+  }
+
+  .bento_grid  .item:nth-child(6) {
+    grid-area: block5;
+    background-image: var(--block-5-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+
+  .bento_grid  .item:nth-child(7) {
+    grid-area: long2;
+    background-color: var(--light-complement);
+  }
+
+  
+
+  /* media queries --- not working rn*/
+  /*tablet*/
+  @media screen and (max-width: 900px) {
+    .bento_grid {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+        "block1 block2 "
+        "block1 block2 "
+        "block1 block2 "
+        "long1 long1"
+        "block3 block4"
+        "block3 block4"
+        "block3 block4"
+        "block5 block5"
+        "block5 block5 "
+        "block5 block5 "
+        "long2 long2 ";
+    }
+  }
+
+  /*phone*/ 
+  @media screen and (max-width: 600px) {
+    .bento_grid {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+        "block1"
+        "block1"
+        "block2"
+        "block2"
+        "long1"
+        "block3"
+        "block3"
+        "block4"
+        "block4"
+        "block5"
+        "block5"
+        "long2"
+        ;
+    }
+
+    header{
+      height: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-area: auto;
+      grid-template-areas:
+      "stamp shop-nav socials"
+  }
+
+  #long-logo{
+    visibility: hidden;
+  }
+  }

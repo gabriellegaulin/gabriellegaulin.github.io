@@ -3,7 +3,8 @@
 
 :root{
     --light-background: #fff;
-    --light-background-pattern: url(./img/surface-design/norigae-checker-teal-web.jpg);
+    --light-background-pattern: url(/img/preppy\ Shells_bgd.jpg);
+    ---body-background-color: #53b0ae;
     --light-main: #39444a ;
     --light-complement: #53b0ae;
     --light-contrast: #9b1b30;
@@ -27,11 +28,12 @@ body{
     background-image: var(--light-background-pattern);
     background-size: 50%;
     background-repeat: repeat;
-    background-color: var(--light-background);
+    background-color: var(---body-background-color);
     font-family: 'Ibarra Real Nova', serif;
     color: var(--light-main);
     font-size: 1.5em;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 95%;
 }
 button{
     font-family: 'Ibarra Real Nova', serif;
@@ -72,9 +74,11 @@ h2{
 nav{
     position: sticky;
     background-color: var(--light-background);
-    border-radius: 8px;
-    margin: 10px 0;
+    border-radius: 8px;    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
     height: auto;
+    width: 95%;
 }
 
 nav ul{
@@ -152,9 +156,9 @@ i:hover{
         margin: auto;  
     }
 
-    #index_nav, #socials_nav {
-        width: 95%;
-        margin: 10px auto;
+    nav ul li .complement{
+      visibility: hidden;
+      width: 0px;
     }
     
   }
@@ -169,11 +173,6 @@ i:hover{
     #anim_box{
         width: 700px;
         margin: auto;
-    }
-    #index_nav, #socials_nav {
-        width: 700px;
-        margin: 10px auto;
-
     }
 
   }
@@ -323,4 +322,141 @@ overflow: hidden;
       flex: 100%;
       max-width: 100%;
     }
+  }
+
+  /* about */
+  .bento_grid {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "block1 block2 block3"
+      "block1 block2 block3"
+      "block1 block2 block3"
+      "long1 long1 block4"
+      "block5 block5 block4"
+      "block5 block5 block4"
+      "block5 block5 long2 ";
+  }
+
+  .item { 
+    border-radius: 10px;
+    background-size: cover;
+    color: var(--light-background);
+    
+    align-items: center;
+  }
+  .item img{
+    height:  100%;
+  }
+
+  .item-content{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item:hover .item-content{
+    visibility: visible;
+    background-color: inherit;
+    width: inherit;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .bento_grid .item:nth-child(1) {
+    grid-area: block1;
+    background-image: var(--block-1-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+  .bento_grid  .item:nth-child(2) {
+    grid-area: block2;
+    background-image: var(--block-2-img);
+    background-position: center;
+    background-color: var(--light-main);
+  }
+  
+  .bento_grid  .item:nth-child(3) {
+    grid-area: block3;
+    background-image: var(--block-3-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+  .bento_grid  .item:nth-child(4) {
+    grid-area: long1;
+    background-color: var(--highlight);
+  }
+  
+  .bento_grid  .item:nth-child(5) {
+    grid-area: block4;
+    background-image: var(--block-4-img);
+    background-position: center;
+    background-color: var(--light-main);
+  }
+
+  .bento_grid  .item:nth-child(6) {
+    grid-area: block5;
+    background-image: var(--block-5-img);
+    background-position: center;
+    background-color: var(--light-contrast);
+  }
+
+  .bento_grid  .item:nth-child(7) {
+    grid-area: long2;
+    background-color: var(--light-complement);
+  }
+
+  
+
+  /* media queries --- not working rn*/
+  /*tablet*/
+  @media screen and (max-width: 900px) {
+    .bento_grid {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+      "block5 block5"
+      "block5 block5 "
+      "block5 block5 "
+      "block1 block2 "
+        "block1 block2 "
+        "block1 block2 "
+        "long1 long1"
+        "block3 block4"
+        "block3 block4"
+        "block3 block4"
+        "long2 long2 ";
+    }
+  }
+
+  /*phone*/ 
+  @media screen and (max-width: 600px) {
+    .bento_grid {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+        "block5"
+        "block5"
+      "block1"
+        "block1"
+        "block2"
+        "block2"
+        "long1"
+        "block3"
+        "block3"
+        "block4"
+        "block4"
+        
+        "long2"
+        ;
+    }
+
   }
