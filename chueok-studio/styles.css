@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root{
     --light-white: #fef6c9;
@@ -53,21 +52,22 @@ header{
 
 #long-logo{
   grid-area: long-logo;
-  align-items: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #long-logo img{
   width: 100%;
-  
 }
 
 #stamp{
   grid-area: stamp;
+  justify-self: center;
+  align-self: center;
 }
 
 #stamp img{
-  justify-self: center;
-  align-self: center;
+  
   height: 80px;
   border-radius: 5px;
 }
@@ -78,6 +78,7 @@ header{
 
 #socials{
   grid-area: socials;
+  justify-self: end;
 }
 
 header ul{
@@ -88,24 +89,22 @@ header ul{
 
 header li{
   padding: 0 10px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /*sub nav for product*/
 .sub-nav{
-  /*border: 1px solid var(--light-complement);
-  border-radius: 20px;*/
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .sub-nav ul{
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  
 }
 
 .sub-nav li{
-  padding: 0;
-
+  padding: 0 10px;
 }
 
 
@@ -136,6 +135,7 @@ header li{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Ibarra Real Nova', serif;
   }
 
   .item-content{

@@ -74,7 +74,8 @@ h2{
 nav{
     position: sticky;
     background-color: var(--light-background);
-    border-radius: 8px;    margin-left: auto;
+    border-radius: 8px;    
+    margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     height: auto;
@@ -118,6 +119,12 @@ i:hover{
     text-align: center;
 }
 
+.main_box{
+  border-radius: 1.5em;
+  background-color: #fff;
+  padding: 20px;
+  height: auto;
+}
 
 
 
@@ -126,10 +133,11 @@ i:hover{
 
 #index_box{
     margin: auto;
-    width: 9%;
+    width: 90%;
+    
 }
 
-#anim_box, .main_box{
+#anim_box{
     border-radius: 1.5em;
     background-color: #fff;
     padding: 20px;
