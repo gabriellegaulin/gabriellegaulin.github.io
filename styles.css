@@ -388,7 +388,7 @@ overflow: hidden;
     grid-area: block1;
     background-image: var(--block-1-img);
     background-position: center;
-    background-color: var(--light-contrast);
+    /*background-color: var(--light-contrast);*/
   }
   .bento_grid  .item:nth-child(2) {
     grid-area: block2;
@@ -412,7 +412,7 @@ overflow: hidden;
     grid-area: block4;
     background-image: var(--block-4-img);
     background-position: center;
-    background-color: var(--light-main);
+    /*background-color: var(--light-main);*/
   }
 
   .bento_grid  .item:nth-child(6) {
@@ -487,4 +487,58 @@ overflow: hidden;
         ;
     }
 
+  }
+
+  /* SSS super simple slideshow css insert*/
+
+  .sss {
+    height: 0;
+    margin: 0; 
+    padding: 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .ssslide {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .ssslide img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+  }
+  
+  .sssnext, .sssprev {
+    width: 25px;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    background: url('/external/SSS-master/sss/images/arr.png') no-repeat;
+  }
+  
+  .sssprev {
+    left: 3%;
+    background-position: 0 50%;
+  }
+  
+  .sssnext {
+    right: 3%;
+    background-position: -26px 50%;
+  }
+  
+  .sssprev:hover, .sssnext:hover {
+    cursor: pointer;
   }
