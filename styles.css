@@ -491,6 +491,10 @@ overflow: hidden;
 
   /* SSS super simple slideshow css insert*/
 
+  .slider{
+    max-width: 500px;
+    margin: auto;
+  }
   .sss {
     height: 0;
     margin: 0; 
