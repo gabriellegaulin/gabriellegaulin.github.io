@@ -1,0 +1,8 @@
+---
+image_path: /assets/img/dig-media/pal-jacket.jpg
+title: Tatreez Jacket
+collection-name: 
+collection-link:
+purchase-link:
+weight: 10
+---

@@ -1,0 +1,72 @@
+<style>
+
+  /* media queries --- not working rn*/
+  /*tablet*/
+  @media screen and (max-width: 900px) {
+    .bento_grid {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+        "block1 block2 "
+        "block1 block2 "
+        "block1 block2 "
+        "long1 long1"
+        "block3 block4"
+        "block3 block4"
+        "block3 block4"
+        "block5 block5"
+        "block5 block5 "
+        "block5 block5 "
+        "long2 long2 ";
+    }
+
+    header{
+      height: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-area: auto;
+      grid-template-areas:
+      "stamp shop-nav socials"
+  }
+
+  #long-logo{
+    visibility: hidden;
+  }
+  }
+
+  /*phone*/ 
+  @media screen and (max-width: 600px) {
+    .bento_grid {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(12, 100px);
+      grid-template-areas:
+        "block1"
+        "block1"
+        "block2"
+        "block2"
+        "long1"
+        "block3"
+        "block3"
+        "block4"
+        "block4"
+        "block5"
+        "block5"
+        "long2"
+        ;
+    }
+
+    header{
+      height: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-area: auto;
+      grid-template-areas:
+      "stamp shop-nav socials"
+  }
+
+  #long-logo{
+    visibility: hidden;
+  }
+  }
+
+</style>

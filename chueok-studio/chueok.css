@@ -1,0 +1,111 @@
+
+:root{
+    --light-white: #fef6c9;
+    --light-main: #f18f01 ;
+    --light-complement: #53b0ae;
+    --light-contrast: #9b1b30;
+    --highlight: #edafb8;
+    --gallery-background: #39444a ;
+    --art-card: url(./img/art/painting/seo-processing-s.png);
+
+    --block-1-img: url(/assets/img/jewelry/img/buddha_hands_color\ \(3\).jpg);
+    --block-2-img: url(/assets/img/stationary/Chaekgeori_disp.JPG);
+    --block-3-img: url();
+    --block-4-img: url(/assets/img/surface-pattern/Midnight-Scholar/Suljari_jade_1.jpg);
+    --block-5-img: url(/assets/img/fashion/hanbok-ribbon-tie-fs.jpg);
+
+}
+
+
+body{
+    padding: 1vw;
+    background: var(--light-white);
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+button{
+  font-family: 'Ibarra Real Nova', serif;
+  color: var(--light-main);
+  font-size: 1.5em;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light-contrast);
+}
+a:hover{
+  color:var(--light-complement);
+}
+
+
+
+
+
+header{
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-area: auto;
+    grid-template-areas:
+    "long-logo long-logo long-logo stamp shop-nav socials"
+}
+
+#long-logo{
+  grid-area: long-logo;
+  align-self: center;
+  justify-self: center;
+}
+
+#long-logo img{
+  width: 100%;
+}
+
+#stamp{
+  grid-area: stamp;
+  justify-self: center;
+  align-self: center;
+}
+
+#stamp img{
+  
+  height: 80px;
+  border-radius: 5px;
+}
+
+#shop-nav{
+  grid-area: shop-nav;
+}
+
+#socials{
+  grid-area: socials;
+  justify-self: end;
+}
+
+header ul{
+  list-style: none;
+  align-items: left;
+  justify-content: space-between;
+}
+
+header li{
+  padding: 0 10px;
+  font-size: 1em;
+}
+
+/*sub nav for product*/
+.sub-nav{
+    margin-bottom: 20px;
+}
+.sub-nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.sub-nav li{
+  padding: 0 10px;
+}
+
+  
+
