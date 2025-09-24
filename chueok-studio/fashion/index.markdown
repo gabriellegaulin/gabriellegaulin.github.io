@@ -34,18 +34,6 @@ published: true
 </div>
 
 
-<div class="">
-  {% for collection in site.collection-name %}
-    <ul>
-      <li>
-        {{ collection.title }}
-      </li>
-    </ul>
-
-
-  {% endfor %}
-</div>
-
 </body>
 
 

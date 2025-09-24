@@ -1,8 +1,8 @@
 ---
 image_path: /assets/img/jewelry/buddhist_hand_color_earring.jpg
-title: Bojagi - multi
+title: Passion Flower
 collection-name: Buddhist Hands
-collection-link: collection-name.url
+collection-link: 
 purchase-link:
 weight: 1
 ---

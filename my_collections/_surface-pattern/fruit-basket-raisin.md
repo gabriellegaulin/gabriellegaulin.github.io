@@ -1,5 +1,5 @@
 ---
-image_path:  \assets\img\surface-pattern\Papercuts\fruit-basket_raisin.jpg
+image_path:  /assets/img/surface-pattern/Papercuts/fruit-basket_raisin.jpg
 title: Fruit Basket - Raisin
 collection-name: Papercuts
 collection-link:

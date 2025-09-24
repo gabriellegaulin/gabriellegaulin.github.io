@@ -159,6 +159,22 @@ published: true
         <img src="/assets/img/about-me/sketchbook/24.11/Image (33).jpg" />
     </div>
 
+
+<div id="sketch-25-Sept" class="slider">
+        <img src="/assets/img/about-me/sketchbook/25.09/1.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/2.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/3.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/4.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/5.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/6.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/7.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/8.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/9.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/10.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/11.png" style="width: 50%;"/>
+        <img src="/assets/img/about-me/sketchbook/25.09/12.png" style="width: 50%;"/>
+    </div>
+
     
 </body>
 
