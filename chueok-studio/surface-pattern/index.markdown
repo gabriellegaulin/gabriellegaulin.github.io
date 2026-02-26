@@ -42,7 +42,7 @@ published: true
 
         <div class="titleBox">
           {{ image.title }} <br/> 
-          <a href="{{ image.collection-link }}">{{ image.collection-name }} Collection</a> <br/>
+          <a href="{{ image.collection-link }}" target="_blank">{{ image.collection-name }} Collection</a> <br/>
           <a href= "{{ image.purchase-link }}" target="_blank">purchase on spoonflower</a>
         </div>
 
