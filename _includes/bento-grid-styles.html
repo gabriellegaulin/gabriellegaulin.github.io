@@ -1,0 +1,99 @@
+<style type="text/css">
+
+.bento_grid {
+   
+   width: 100% !important;
+   max-width: 1500px;
+   height: 100%;
+   display: grid;
+   gap: 1vw;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto;
+   grid-template-areas:
+     "block1 block2 block3"
+     "block1 block2 block3"
+     "block1 block2 block3"
+     "long1 long1 block4"
+     "block5 block5 block4"
+     "block5 block5 block4 "
+     "block5 block5 long2 ";
+ }
+
+ .item {
+   border: 0px solid #464545;
+   border-radius: 10px;
+   background-size: cover;
+   color: var(--light-white);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Ibarra Real Nova', serif;
+ }
+
+ .item-content{
+   visibility: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+ .item-content a{
+   color: var(--light-white);
+ }
+ .item-content a:hover{
+   font-size: 1.5em;
+ }
+
+ .item:hover .item-content{
+   visibility: visible;
+   background-color: inherit;
+   width: inherit;
+   border-radius: 10px;
+   height: 100%;
+   width: 100%;
+ }
+ 
+ .bento_grid .item:nth-child(1) {
+   grid-area: block1;
+   background-image: var(--block-1-img);
+   background-position: center;
+   background-color: var(--light-contrast);
+ }
+ .bento_grid  .item:nth-child(2) {
+   grid-area: block2;
+   background-image: var(--block-2-img);
+   background-position: center;
+   background-color: var(--light-main);
+ }
+ 
+ .bento_grid  .item:nth-child(3) {
+   grid-area: block3;
+   background-image: var(--block-3-img);
+   background-position: center;
+   background-color: var(--light-contrast);
+ }
+ .bento_grid  .item:nth-child(4) {
+   grid-area: long1;
+   background-color: var(--highlight);
+ }
+ 
+ .bento_grid  .item:nth-child(5) {
+   grid-area: block4;
+   background-image: var(--block-4-img);
+   background-position: center;
+   background-color: var(--light-main);
+ }
+
+ .bento_grid  .item:nth-child(6) {
+   grid-area: block5;
+   background-image: var(--block-5-img);
+   background-position: center;
+   background-color: var(--light-contrast);
+ }
+
+ .bento_grid  .item:nth-child(7) {
+   grid-area: long2;
+   background-color: var(--light-complement);
+ }
+
+</style>

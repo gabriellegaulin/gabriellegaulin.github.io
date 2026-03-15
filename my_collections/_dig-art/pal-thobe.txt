@@ -1,0 +1,8 @@
+---
+image_path: /assets/img/dig-media/pal-thobe.jpg
+title: Tatreez Thobe
+collection-name: 
+collection-link:
+purchase-link:
+weight: 10
+---

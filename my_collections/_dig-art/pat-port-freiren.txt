@@ -1,0 +1,8 @@
+---
+image_path: /assets/img/dig-media/pattern-port-freiren.jpg
+title: Freiren
+collection-name: Pattern Portraits
+collection-link:
+purchase-link:
+weight: 10
+---
