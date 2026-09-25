@@ -10,7 +10,7 @@ layout: default
   </section>
   
   <div id="projects" class="patchwork">
-    {% assign select-projects = site.projects | where: "tag", {{page.title}}  %}
+    {% assign select-projects = site.projects | where: "tag", page.title %}
     {% for project in select-projects %}
       {% assign cls = "tile t" | append: forloop.index %}
       <a class="{{ cls }}" href="{{ project.url | relative_url }}">
