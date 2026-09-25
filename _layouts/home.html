@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<main class="page">
+  <section class="hero-intro">
+    <div>
+      <div class="kicker">artist · designer · maker</div>
+      <h2 style="font-family: var(--hand); font-size: 32px;">Hi! I'm Gabrielle, a design loving, language enthusiastic explorer. </h2>
+    </div>
+    <div class="intro-note">art<br>design<br>fashion<br>jewelry<br>+ whatever comes next ↗</div>
+  </section>
+
+  <div id="projects" class="patchwork">
+    {% assign projects = site.projects %}
+    {% for project in projects limit:6 %}
+      {% assign cls = "tile t" | append: forloop.index %}
+      <a class="{{ cls }}" href="{{ project.url | relative_url }}">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title | escape }}">
+        <span class="label">{{ project.title }} · {{ project.category }}</span>
+      </a>
+    {% endfor %}
+
+    <div class="tile t7 tile-note"> {{ site.title }} </div>
+
+    {% assign process = site.projects[6] %}
+    {% if process %}
+      <a class="tile t8" href="{{ process.url | relative_url }}">
+        <img src="{{ '/assets/process.svg' | relative_url }}" alt="Process">
+        <span class="label">Process · {{ process.title }}</span>
+      </a>
+    {% else %}
+      <div class="tile t8"><img src="{{ '/assets/process.svg' | relative_url }}" alt="Process"></div>
+    {% endif %}
+
+    {% assign painting = site.projects | where: "slug", "cerulean-days" | first %}
+    {% if painting %}
+      <a class="tile t9" href="{{ painting.url | relative_url }}">
+        <img src="{{ painting.image | relative_url }}" alt="Painting detail">
+        <span class="label">Detail · {{ painting.title }}</span>
+      </a>
+    {% endif %}
+
+    {% assign drawing = site.projects | where: "slug", "figurative-studies" | first %}
+    {% if drawing %}
+      <a class="tile t10" href="{{ drawing.url | relative_url }}">
+        <img src="{{ drawing.image | relative_url }}" alt="Drawing detail">
+        <span class="label">Sketchbook · {{ drawing.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+
+  <section id="language" class="section-break">
+    <p>I am also an avid language learner!</p>
+  </section>
+
+
+  <section id="about" class="section-break">
+    <span>About</span><span><a href="/blog" target="_blank">blog</a></span>
+  </section>
+
+  <p style="max-width:620px;font-family:var(--serif);font-size:28px;line-height:1.15">
+    I’m passionate about learning, creating, and engaging with 
+    other cultures and perspectives. I hope to make the world a 
+    more beautiful and sustainable place. <a href="/about">more about me</a>
+  </p>
+  
+</main>
