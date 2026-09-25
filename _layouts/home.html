@@ -11,7 +11,7 @@ layout: default
   </section>
 
   <div id="projects" class="patchwork">
-    {% assign projects = site.projects | sort: 'year' | reverse %}
+    {% assign projects = site.projects | sort: 'year' %}
     {% for project in projects limit:6 %}
       {% assign cls = "tile t" | append: forloop.index %}
       <a class="{{ cls }}" href="{{ project.url | relative_url }}">
