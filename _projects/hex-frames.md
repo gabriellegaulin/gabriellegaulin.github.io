@@ -1,7 +1,7 @@
 ---
 title: "Hexagon Frames"
 slug: "hex-frames"
-tage: art
+tag: "art"
 category: "Digital Art"
 year: 2023
 image: "/assets/art/dig-media/hex-frame-olive.jpg"

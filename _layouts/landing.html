@@ -8,7 +8,19 @@ layout: default
       <h2 style="font-family: var(--hand); font-size: 32px;"> {{ page.title }} </h2>
     </div>
   </section>
+  
+  <div id="projects" class="patchwork">
+    {% assign select-projects = site.projects | where: "tag", {{page.title}}  %}
+    {% for project in select-projects %}
+      {% assign cls = "tile t" | append: forloop.index %}
+      <a class="{{ cls }}" href="{{ project.url | relative_url }}">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title | escape }}">
+        <span class="label">{{ project.title }} · {{ project.category }}</span>
+      </a>
+    {% endfor %}
 
+
+  </div>
   
 
  

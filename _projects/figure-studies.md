@@ -1,7 +1,7 @@
 ---
 title: "Figure Studies"
 slug: "figure-studies"
-tag: art
+tag: "art"
 category: "Drawing"
 year: 2010 --> on
 image: "/assets/art/trad-media/fan.jpg"

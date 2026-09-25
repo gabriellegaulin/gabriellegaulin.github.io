@@ -1,7 +1,7 @@
 ---
 title: "Film Strip Sketches"
 slug: "small-ceramics"
-tag: art
+tag: "art"
 category: "Mixed Media"
 year: 2010
 image: "/assets/art/mixed-media/lady-zoom.png"

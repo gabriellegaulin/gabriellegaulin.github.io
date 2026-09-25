@@ -4,6 +4,8 @@ layout: pattern
 title: "Painted Portraits"
 slug: "painting-portraits"
 category: "Painting"
+tag: "art"
+
 year: 2024
 image: "/assets/art/trad-media/portrait_cathedral_moscow.jpg"
 description: "."

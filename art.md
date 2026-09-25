@@ -3,6 +3,6 @@ layout: landing
 title: "art"
 permalink: /art
 
-desc: "paintings - drawings - digital"
+desc: "paintings - drawings - digital - "
 ---
 

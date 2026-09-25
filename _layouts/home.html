@@ -11,7 +11,7 @@ layout: default
   </section>
 
   <div id="projects" class="patchwork">
-    {% assign projects = site.projects %}
+    {% assign projects = site.projects | sort: 'year' | reverse %}
     {% for project in projects limit:6 %}
       {% assign cls = "tile t" | append: forloop.index %}
       <a class="{{ cls }}" href="{{ project.url | relative_url }}">
@@ -20,33 +20,14 @@ layout: default
       </a>
     {% endfor %}
 
-    <div class="tile t7 tile-note"> {{ site.title }} </div>
+    <div class="tile t7 tile-note"> {{ page.note }} </div>
 
-    {% assign process = site.projects[6] %}
-    {% if process %}
-      <a class="tile t8" href="{{ process.url | relative_url }}">
-        <img src="{{ '/assets/process.svg' | relative_url }}" alt="Process">
-        <span class="label">Process · {{ process.title }}</span>
+    {% assign tile8 = projects[6] %}
+      <a class="tile t8" href="{{ tile8.url | relative_url }}">
+        <img src="{{ tile8.image | relative_url }}" alt="{{ tile8.title | escape }}">
+        <span class="label">{{ tile8.title }} · {{ tile8.category }}</span>
       </a>
-    {% else %}
-      <div class="tile t8"><img src="{{ '/assets/process.svg' | relative_url }}" alt="Process"></div>
-    {% endif %}
 
-    {% assign painting = site.projects | where: "slug", "cerulean-days" | first %}
-    {% if painting %}
-      <a class="tile t9" href="{{ painting.url | relative_url }}">
-        <img src="{{ painting.image | relative_url }}" alt="Painting detail">
-        <span class="label">Detail · {{ painting.title }}</span>
-      </a>
-    {% endif %}
-
-    {% assign drawing = site.projects | where: "slug", "figurative-studies" | first %}
-    {% if drawing %}
-      <a class="tile t10" href="{{ drawing.url | relative_url }}">
-        <img src="{{ drawing.image | relative_url }}" alt="Drawing detail">
-        <span class="label">Sketchbook · {{ drawing.title }}</span>
-      </a>
-    {% endif %}
   </div>
 
   <section id="language" class="section-break">

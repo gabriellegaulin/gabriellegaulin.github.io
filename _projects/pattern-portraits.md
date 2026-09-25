@@ -1,7 +1,8 @@
 ---
 title: "Pattern Portraits"
 slug: "pattern-portraits"
-tag: "Art"
+tag: "art"
+detail: "yes"
 category: "Digital Art"
 year: 2023
 image: "/assets/art/dig-media/pattern-port-yakutia.jpg"

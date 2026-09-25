@@ -2,6 +2,7 @@
 title: "Drawing Haebangchon"
 slug: "draw-hbc"
 category: "Painting"
+tag: "art"
 year: 2026
 image: "/assets/art/trad-media/draw-hbc-map.jpg"
 description: ""
