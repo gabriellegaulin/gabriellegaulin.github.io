@@ -12,7 +12,7 @@ collections:
     permalink: /projects/:name/
   sketchbooks:
     output: true
-    permalink: /sketchbooks/:name
+    permalink: /sketchbooks/:name/
 defaults:
   - scope:
       path: ""
