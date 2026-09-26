@@ -10,8 +10,8 @@ layout: default
     <div class="intro-note">art<br>design<br>fashion<br>jewelry<br>+ whatever comes next ↗</div>
   </section>
 
-  <!-- <div id="projects" class="patchwork">
-    {% assign projects = site.projects | sort: 'year' %}
+  <div id="projects" class="patchwork">
+    {% assign projects = site.projects %}
     {% for project in projects limit:6 %}
       {% assign cls = "tile t" | append: forloop.index %}
       <a class="{{ cls }}" href="{{ project.url | relative_url }}">
@@ -28,7 +28,7 @@ layout: default
         <span class="label">{{ tile8.title }} · {{ tile8.category }}</span>
       </a>
 
-  </div> -->
+  </div> 
 
   <section id="language" class="section-break">
     <p>I am also an avid language learner!</p>
