@@ -1,0 +1,119 @@
+---
+layout: default
+---
+<main class="page about-page">
+  <section class="about-hero">
+    <div class="about-photo-wrap">
+      <span class="doodle doodle-heart">♡</span>
+      <span class="photo-tape tape-a"></span>
+      <img class="about-photo" src="{{ page.profile_image | default: '/assets/about/profile-placeholder.svg' | relative_url }}" alt="{{ page.profile_alt | default: 'Portrait' | escape }}">
+      <span class="photo-caption">hi, i'm<br>gabrielle ✿</span>
+    </div>
+
+    <div class="about-intro">
+      <div class="kicker">a little about me</div>
+      <h1 class="about-title">Hello,<br>I'm Gabrielle.</h1>
+      <div class="hand-note">artist · designer · collector of little things</div>
+      <div class="about-bio">
+        {{ page.bio | markdownify }}
+      </div>
+    </div>
+
+    <div class="spotify-card scrapbook-card">
+      <div class="card-label"><span>♫</span> currently listening</div>
+      {% if page.spotify_embed %}
+        <iframe src="{{ page.spotify_embed }}" width="100%" height="352" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify playlist"></iframe>
+      {% else %}
+        <div class="spotify-placeholder">
+          <div class="spotify-mark">●</div>
+          <strong>Add your Spotify playlist</strong>
+          <p>Paste a Spotify embed URL into <code>spotify_embed</code> in <code>about.md</code>.</p>
+        </div>
+      {% endif %}
+      <span class="margin-doodle">{{ page.music-note }}</span>
+    </div>
+  </section>
+
+  <section class="about-grid">
+    <article class="statement-card scrapbook-card">
+      <a class="cute-icon envelope-icon" href="{{ '/personal-statement/' | relative_url }}" aria-label="Read personal statement"><span>✉</span></a>
+      <div>
+        <div class="card-kicker">a little more</div>
+        <h2>Personal statement</h2>
+        <p>{{ page.statement_blurb }}</p>
+        <a class="arrow-link" href="{{ '/personal-statement/' | relative_url }}">Read my statement <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="reading-card scrapbook-card">
+      <div class="reading-heading">
+        <div>
+          <div class="card-kicker">currently</div>
+          <h2>What I'm reading</h2>
+        </div>
+        <div class="book-doodle" aria-hidden="true">▤</div>
+      </div>
+      <div class="reading-list">
+        {% for book in page.reading %}
+          <div class="book-row">
+            <div class="book-cover">
+              {% if book.cover %}<img src="{{ book.cover | relative_url }}" alt="">{% else %}<span>{{ forloop.index }}</span>{% endif %}
+            </div>
+            <div>
+              <strong>{{ book.title }}</strong>
+              <span>{{ book.author }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <span class="margin-note">{{ page.margin-note }}</span>
+    </article>
+
+    <article class="treasure-card scrapbook-card">
+      <div class="treasure-copy">
+        <a class="cute-icon" href="{{ '/treasure-box/' | relative_url }}" aria-label="Open Treasure Box">
+          <!-- <img src="/assets/about-me/treasure-box/chest-closed.PNG" /> -->
+        </a>
+        <div>
+          <div class="card-kicker">open the drawer</div>
+          <h2>Treasure Box</h2>
+          <p>{{ page.treasure_blurb }}</p>
+          <a class="arrow-link" href="{{ '/treasure-box/' | relative_url }}">Open the treasure box <span>→</span></a>
+        </div>
+      </div>
+      <div class="treasure-mini-gallery">
+        {% for image in page.treasure_preview limit:5 %}
+          <img src="{{ image | relative_url }}" alt="">
+        {% endfor %}
+      </div>
+    </article>
+
+    <article class="sketchbook-card scrapbook-card">
+      <div class="sketchbook-heading">
+        <div>
+          <div class="card-kicker"> <a href="">sketchbook archive</a></div>
+          <h2>My Sketchbook</h2>
+        </div>
+      </div>
+
+      <div class="sketchbook" data-sketchbook>
+        <button class="page-turn prev" type="button" data-prev aria-label="Previous sketchbook spread">‹</button>
+        <div class="book-scene">
+          <div class="book-spread" data-spread></div>
+        </div>
+        <button class="page-turn next" type="button" data-next aria-label="Next sketchbook spread">›</button>
+      </div>
+      <div class="sketchbook-footer">
+        <span class="page-count" data-page-count></span>
+      </div>
+    </article>
+  </section>
+
+  <div class="about-marquee">draw · make · collect · wander · repeat ✶</div>
+</main>
+
+<script>
+window.SKETCHBOOK_PAGES = {{ page.sketchbook | jsonify }};
+window.SITE_BASEURL = "{{ site.baseurl }}";
+</script>
+<script src="{{ '/assets/sketchbook.js' | relative_url }}"></script>

@@ -1,0 +1,1 @@
+sketchbook images - set height to 384 px (keep size 600 kb or below)

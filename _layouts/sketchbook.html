@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="sketchbook-card scrapbook-card">
+      <div class="sketchbook-heading">
+        <div>
+          <div class="card-kicker"> <a href="">sketchbook archive</a></div>
+          <h2>My Sketchbook</h2>
+        </div>
+      </div>
+
+      <div class="sketchbook" data-sketchbook>
+        <button class="page-turn prev" type="button" data-prev aria-label="Previous sketchbook spread">‹</button>
+        <div class="book-scene">
+          <div class="book-spread" data-spread></div>
+        </div>
+        <button class="page-turn next" type="button" data-next aria-label="Next sketchbook spread">›</button>
+      </div>
+      <div class="sketchbook-footer">
+        <span>flip through the pages</span>
+        <span class="page-count" data-page-count></span>
+      </div>
+    </article>
+  </section>
+
+  <div class="about-marquee">draw · make · collect · wander · repeat ✶</div>
+</main>
+
+<script>
+window.SKETCHBOOK_PAGES = {{ page.sketchbook | jsonify }};
+window.SITE_BASEURL = "{{ site.baseurl }}";
+</script>
+<script src="{{ '/assets/sketchbook.js' | relative_url }}"></script>

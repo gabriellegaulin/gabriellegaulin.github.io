@@ -1,7 +1,21 @@
-
-url: "https://gabriellegaulin.com" # the base hostname & protocol for your site, e.g. http://example.com
-
-
-# Build settings
+title: "Gabrielle Gaulin"
+description: "Art, design, fashion, jewelry, drawing, painting, and other projects."
+url: ""
+baseurl: ""
 markdown: kramdown
-permalink: :title
+permalink: pretty
+notetext: "a few of my favorite things"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  sketchbooks:
+    output: true
+    permalink: /sketchbooks/:name/
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
