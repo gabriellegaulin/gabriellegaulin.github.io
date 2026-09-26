@@ -3,6 +3,7 @@ title: "Oil Pastel Drawings"
 slug: "oil-pastels"
 category: "Drawing"
 tag: "art"
+
 year: 2023
 image: "/assets/art/trad-media/oilpastel-2.jpg"
 description: ""

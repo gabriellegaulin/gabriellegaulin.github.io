@@ -2,6 +2,8 @@
 layout: pattern
 title: "Midnight Scholar Collection"
 slug: "pattern-midnight-scholar"
+tag: "design"
+
 category: "Pattern Design"
 year: 2023
 image: "/assets/pattern/midnight-scholar/suljari_jade.png"

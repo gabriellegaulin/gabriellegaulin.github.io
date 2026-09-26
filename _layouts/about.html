@@ -30,7 +30,7 @@ layout: default
           <p>Paste a Spotify embed URL into <code>spotify_embed</code> in <code>about.md</code>.</p>
         </div>
       {% endif %}
-      <span class="margin-doodle">good music<br>= better days ♡</span>
+      <span class="margin-doodle">{{ page.music-note }}</span>
     </div>
   </section>
 
@@ -66,7 +66,7 @@ layout: default
           </div>
         {% endfor %}
       </div>
-      <span class="margin-note">good books<br>make happy me ♡</span>
+      <span class="margin-note">{{ page.margin-note }}</span>
     </article>
 
     <article class="treasure-card scrapbook-card">
@@ -104,7 +104,6 @@ layout: default
         <button class="page-turn next" type="button" data-next aria-label="Next sketchbook spread">›</button>
       </div>
       <div class="sketchbook-footer">
-        <span>flip through the pages</span>
         <span class="page-count" data-page-count></span>
       </div>
     </article>

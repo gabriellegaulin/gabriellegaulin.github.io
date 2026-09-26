@@ -5,6 +5,7 @@ title: "Chinese Papercut Patterns"
 slug: "pattern-papercut"
 category: "Pattern Design"
 tag: "design"
+
 year: 2023
 layout: pattern
 image: "/assets/pattern/papercut/main.jpg"

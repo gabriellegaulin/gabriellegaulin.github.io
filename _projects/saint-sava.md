@@ -3,8 +3,9 @@ layout: pattern
 
 title: "Saint Sava Collection"
 slug: "pattern-saint-sava"
-type: "Design"
+tag: "design"
 category: "Pattern Design"
+
 year: 2025
 image: "/assets/pattern/saint-sava/diamond-mosaic_evening-stars.png"
 description: "A pattern design collection that revels in the rich jewel tones of mosaic and fresco."
