@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<main class="page project-page pattern-project-page">
+  <a class="back" href="{{ '/' | relative_url }}">← All designs</a>
+  <section class="project-head">
+    <div>
+      <div class="project-meta">{{ page.category }} / {{ page.year }}</div>
+      <h1 class="project-title">{{ page.title }}</h1>
+      <p class="project-desc">{{ page.description }}</p>
+      <div class="project-note">{{ page.note }} ✶</div>
+      <div class="purchase">{{ page.purchase }}</div>
+      <div class="materials"><strong>Materials</strong><br>{{ page.materials }}</div>
+    </div>
+    <div><img class="hero-art" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></div>
+  </section>
+
+  <section class="pattern-gallery">
+    {% for image in page.gallery %}
+      <figure class="pattern-image">
+        <img src="{{ image.src | relative_url }}" alt="{{ image.alt | default: page.title | escape }}">
+        {% if image.caption %}<figcaption class="caption">{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </section>
+
+  <nav class="project-nav">
+    {% assign projects = site.projects %}
+    {% assign current_index = 0 %}
+    {% for project in projects %}
+      {% if project.url == page.url %}{% assign current_index = forloop.index0 %}{% endif %}
+    {% endfor %}
+    {% assign previous_index = current_index | minus: 1 %}
+    {% assign next_index = current_index | plus: 1 %}
+    {% if previous_index < 0 %}{% assign previous_index = projects.size | minus: 1 %}{% endif %}
+    {% if next_index >= projects.size %}{% assign next_index = 0 %}{% endif %}
+    {% assign previous = projects[previous_index] %}
+    {% assign next = projects[next_index] %}
+    <a href="{{ previous.url | relative_url }}">← {{ previous.title }}</a>
+    <a href="{{ next.url | relative_url }}">{{ next.title }} →</a>
+  </nav>
+</main>

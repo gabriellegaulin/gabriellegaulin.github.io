@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<main class="page treasure-page">
+  <a class="back" href="{{ '/about/' | relative_url }}">← Back to about</a>
+  <section class="treasure-header">
+    <div>
+      <div class="kicker">little things worth keeping</div>
+      <h1 class="treasure-title">Treasure Box ✶</h1>
+      <p class="treasure-lede">A small, growing collection of photographs, found objects, colors, places, textures, and tiny visual souvenirs.</p>
+    </div>
+    <div class="treasure-sticker">open<br>carefully<br>♡</div>
+  </section>
+
+  <section class="treasure-gallery">
+    {% for image in page.gallery %}
+      <figure>
+        <div class="treasure-image"><img src="{{ image.src | relative_url }}" alt="{{ image.alt | escape }}"></div>
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </section>
+</main>
