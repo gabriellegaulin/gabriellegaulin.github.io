@@ -21,7 +21,5 @@ gallery:
   - src: /assets/art/trad-media/seo-processing.jpg
     alt: "reference"
     caption: "reference / collected image"
-  - src: /assets/jewelry.svg
-    alt: "another view"
-    caption: "another view"
+
 ---
